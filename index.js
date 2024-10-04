@@ -41,3 +41,14 @@ let c1= "cars";
 let c2= "car1";
 document.getElementById("carmine").innerHTML = mycar[c1][c2];
 document.write("   "+mycar.cars.car2)
+// Displaying Properties in a Loop
+const newpersons = {
+  newpersonsname: "John",
+  age: 30,
+  city: "New York"
+};
+ let te="";
+ for(let x in person){
+  te += newpersons[x]+""
+ }
+console.log(newpersons)
