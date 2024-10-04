@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript_day_four_objects</title>
+  </head>
+
+  <body>
+    <!-- objects are like the cars,animals,and other subjects -->
+
+    <script>
+      let mobile = { type: "Android", brand: "note", price: "10000" };
+      // console.log(mobile)
+    </script>
+    <h1 id="mobile"></h1>
+    <!-- JavaScript Objects are Mutable -->
+    <h2 id="objmute"></h2>
+    <script>
+      const personme = {
+        firstNamee: "muthu",
+        lastNamee: "kumar",
+        age: 50,
+        eyesColor: "blue",
+      };
+      const x = personme;
+      x.age = 20;
+
+      document.getElementById("objmute").innerHTML =
+        "myage" + " " + " is " + +personme.age;
+
+      // Accessing a Property with an Expression
+      const personsme = {
+        firstNames: "muthu",
+        lastNames: "kumar",
+        age: 50,
+        eyesColors: "blue",
+      };
+      let y = "firstNames";
+      let z = "lastNames";
+
+      document.write(personsme[y] + personsme[z]);
+    </script>
+    <script>
+      const people = {
+        peoplename: "Ashwin",
+        peopleage: 12,
+      };
+      // add details
+      people.peoplenationality = "indian";
+      console.log(people);
+      // adding delete options
+      delete people["peopleage"];
+      console.log(people);
+    </script>
+    <h3 id="carmine"></h3>
+    <!-- creating an arrray and geeting object values -->
+    <h4 id="arraym"></h4>
+    <script>
+      const personarray = {
+        name1: "muthu",
+        age1: 23,
+        favcolor: "blue",
+      };
+      const myarray = Object.values(personarray);
+      document.getElementById("arraym").innerHTML = myarray;
+    </script>
+    <!-- The Object.entries() Method
+ -->
+    <p id="fruits"></p>
+
+    <script>
+      const fruits = { Bananas: 300, Oranges: 200, Apples: 500 };
+
+      let text = "";
+      for (let [fruit, amount] of Object.entries(fruits)) {
+        text += fruit + ": " + amount + "<br>";
+      }
+
+      document.getElementById("fruits").innerHTML = text;
+    </script>
+    <p id="bike"></p>
+    <script>
+      const bikes = {
+        model: 123,
+        colors: "variant",
+        type: "petrol",
+      };
+
+      document.getElementById("bike").innerHTML = JSON.stringify(bikes);
+    </script>
+    <p id="biker"></p>
+    <script>
+      function bikers(modelb, colorsb, typeb) {
+        (this.model = modelb), (this.colors = colorsb), (this.type = typeb);
+      }
+      const newbike = new bikers(1234, "black", "cng");
+      const newbike1=new bikers(2345,"blue","petrol");
+    //   adding property
+bikers.prototype.nation="india"
+      document.getElementById("biker").innerHTML = newbike.colors+ "   "+ newbike.type +" "+newbike.nation;
+    </script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
